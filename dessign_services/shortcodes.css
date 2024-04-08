@@ -1,0 +1,18 @@
+.vc_column_container > .vc_column-inner {
+  padding: 0;
+}
+#demandeDevisLink{
+  color: white;
+  background-color: #001B5B;
+  border-radius: 30px;
+  font-size: 20px;
+  width: max-content;
+  margin-left: 30%;
+  padding: 10px;
+}
+
+@media (max-width:991px) {
+  #topDescriptionCon {
+    text-align: center !important;
+  }
+}

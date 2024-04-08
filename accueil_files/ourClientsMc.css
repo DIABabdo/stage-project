@@ -1,0 +1,27 @@
+@media screen and (min-width: 630px) {
+  #ourClients #ourClientsCon {
+    width: 613px;
+    margin: auto;
+    /*-ms-grid-columns: (1fr)[2];*/
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 930px) {
+  #ourClients #ourClientsCon {
+    width: 840px;
+    margin: auto;
+    /*-ms-grid-columns: (1fr)[3];*/
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1336px) {
+  #ourClients #ourClientsCon {
+    width: 1208px;
+    margin: auto;
+    /*-ms-grid-columns: (1fr)[4];*/
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/*# sourceMappingURL=ourClientsMc.css.map */

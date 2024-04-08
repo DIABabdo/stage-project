@@ -1,0 +1,65 @@
+.mainTitle {
+    text-align: center !important;
+    font-weight: bold;
+    color: #001B5B;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center !important;
+    font-weight: bold;
+    color: #001B5B
+}
+
+#first-link {
+    --i: .6s
+}
+
+#second-link {
+    --i: .8s
+}
+
+#third-link {
+    --i: 1s
+}
+
+#fourth-link {
+    --i: 1.2s
+}
+
+#fifth-link {
+    --i: 1.4s
+}
+
+#sixth-link {
+    --i: 1.6s
+}
+
+#seventh-link {
+    --i: 1.8s
+}
+
+#eighth-link {
+    --i: 2s
+}
+
+#nineth-link {
+    --i: 2.2s
+}
+
+span.font17 {
+    font-size: 17pt
+}
+
+span.font12 {
+    font-size: 12pt
+}
+
+span.spanBlue {
+    color: #2c3d91
+}
+
+.normalLink {
+    text-decoration: none;
+    color: inherit;
+}

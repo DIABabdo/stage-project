@@ -1,0 +1,16 @@
+const firstNumber = document.getElementById("firstNumber");
+const secondNumber = document.getElementById("secondNumber");
+const answer = document.getElementById("answer");
+
+firstNumber.textContent = Math.floor(Math.random() * 9);
+secondNumber.textContent = Math.floor(Math.random() * 9);
+// alert("fdsjlka");
+
+const checkAnswer = () => {
+  let calcul =
+    parseInt(firstNumber.textContent) + parseInt(secondNumber.textContent);
+  if (parseInt(answer.value) !== calcul) {
+    alert("Wrong answer");
+    return false;
+  }
+};

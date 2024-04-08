@@ -1,0 +1,79 @@
+ErrorDocument 404 /page-non-trouvee.html
+
+RewriteEngine On
+
+# REDIRECT TO HTTPS AND WWW (nettoyage-casablanca-maroc.com)
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^www\.nettoyage-casablanca-maroc\.com$ [NC]
+RewriteRule ^(.*)$ https://www.nettoyage-casablanca-maroc.com/$1 [L,R=301]
+
+# HTTP STRICT TRANSPORT SECURITY
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+
+# GESTION DU CACHE (mod_expires)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    # Ajoutez d'autres types de fichiers ici si nécessaire
+</IfModule>
+
+# MOD_DEFLATE COMPRESSION
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript application/x-httpd-php
+    # Ajoutez d'autres types de fichiers ici si nécessaire
+</IfModule>
+
+# Cache-Control Headers
+<IfModule mod_headers.c>
+    <FilesMatch "\\.(ico|jpe?g|png|gif|swf|gz|ttf)$">
+    Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+    <FilesMatch "\\.(css)$">
+    Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+    <FilesMatch "\\.(js)$">
+    Header set Cache-Control "max-age=2592000, private"
+    </FilesMatch>
+    <filesMatch "\\.(html|htm)$">
+    Header set Cache-Control "max-age=7200, public"
+    </filesMatch>
+    <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+    Header unset Cache-Control
+    </FilesMatch>
+</IfModule>
+
+# Désactivation de la lecture des répertoires
+Options -Indexes
+
+# ETag désactivés
+Header unset ETag
+FileETag none
+
+# Protection de certains fichiers
+<files wp-config.php>
+    order allow,deny
+    deny from all
+</files>
+
+<files .htaccess>
+    order allow,deny
+    deny from all
+</files>
+
+# Compression de contenu
+<IfModule mod_deflate.c>
+    # Ajoutez ici d'autres types de fichiers à compresser si nécessaire
+</IfModule>
+
+# Configuration de PHP
+<IfModule mime_module>
+    AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php82” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php82 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

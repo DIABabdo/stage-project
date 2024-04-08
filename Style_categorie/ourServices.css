@@ -1,0 +1,157 @@
+#ourServicescatg #ourServicesTitlecatg {
+  text-align: center;
+  font: 1.5rem "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 30px 0px;
+}
+
+#ourServicescatg #ourServicesListConcatg {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  /*-ms-grid-columns: (1fr)[1];*/
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 20px;
+}
+
+#ourServicescatg #ourServicesListConcatg .serviceConcatg {
+  width: 300px;
+  height: 520px;
+  position: relative;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#ourServicescatg #ourServicesListConcatg .serviceConcatg .serviceImgConcatg {
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#ourServicescatg #ourServicesListConcatg .serviceConcatg .serviceImgConcatg a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 90%;
+  width: 90%;
+}
+
+#ourServicescatg #ourServicesListConcatg .serviceConcatg .serviceImgConcatg a img {
+  height: 100%;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#ourServicescatg #ourServicesListConcatg .serviceConcatg .serviceDescConcatg {
+  height: 46%;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+#ourServicescatg #ourServicesListConcatg .serviceConcatg .serviceDescConcatg .openServiceLink2catg {
+  text-decoration: none;
+  color: black;
+}
+
+#ourServicescatg #ourServicesListConcatg .serviceConcatg .serviceDescConcatg .openServiceLink2catg hr {
+  display: none;
+}
+
+#ourServicescatg #ourServicesListConcatg .serviceConcatg .serviceDescConcatg ul {
+  padding-left: 40px;
+}
+
+#ourServicescatg #ourServicesListConcatg .serviceConcatg .serviceDescConcatg a {
+  font: 1rem "Poppins", sans-serif;
+  text-decoration: none;
+  color: #4f6fce;
+}
+
+#ourServicescatg #ourServicesListConcatg .serviceConcatg .serviceDescConcatg p {
+  padding: 5px 0px;
+}
+
+#ourServicescatg #ourServicesListConcatg .serviceConcatg .serviceDescConcatg span {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+#ourServices-2catg #ourServices-2Titlecatg {
+  font: 2rem "Poppins", sans-serif;
+  text-align: center;
+  padding: 30px 30px;
+  font-weight: 600;
+}
+
+#ourServices-2catg a {
+  display: block;
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+/* #ourServices-2catg a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#ourServices-2catg a h1 {
+  position: absolute;
+  color: black;
+  font: 2rem "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+#ourServices-2catg a .ourServices-2Shadowcatg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  opacity: 0.3;
+} */
+/*# sourceMappingURL=ourServices.css.map */

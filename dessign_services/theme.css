@@ -1,0 +1,12 @@
+﻿
+.main-content{padding-top:35px;}
+hr{opacity:1;border:0;height:1px;margin:22px 0}
+@supports (-webkit-overflow-scrolling: touch){.bg-attach-fixed{background-attachment:scroll}}.color-white{color:#fff !important}.color-white a{color:#fff !important}table{width:100%}table p{margin:0}img{max-width:100%;height:auto}embed,iframe,object,video{max-width:100%;vertical-align:middle}th,td{padding:8px}
+
+
+body.wide .container:not(.inner-container){width:100%;max-width:100%}
+
+#coladress{
+    color: #001b5b;
+    font-size: 12px;
+    }

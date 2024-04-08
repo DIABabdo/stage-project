@@ -1,0 +1,18 @@
+@media screen and (min-width: 400px) {
+  #ourServicescatg #ourServicesListConcatg {
+    width: 400px;
+    margin: auto;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #ourServices-2catg a {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #ourServicescatg #ourServicesListConcatg {
+    width: 950px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*# sourceMappingURL=ourServicesMc.css.map */

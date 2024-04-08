@@ -1,0 +1,2 @@
+User-Agent: *
+Sitemap: https://www.nettoyage-casablanca-maroc.com/sitemap.xml

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5P7X4W7B');</script>
+    <!-- End Google Tag Manager -->
+    
+            
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style>
+
+
+            @import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500');
+            
+            @-moz-keyframes rocket-movement { 100% {-moz-transform: translate(1200px,-600px);} }
+            @-webkit-keyframes rocket-movement {100% {-webkit-transform: translate(1200px,-600px); } }
+            @keyframes rocket-movement { 100% {transform: translate(1200px,-600px);} }
+            @-moz-keyframes spin-earth { 100% { -moz-transform: rotate(-360deg); transition: transform 20s;  } }
+            @-webkit-keyframes spin-earth { 100% { -webkit-transform: rotate(-360deg); transition: transform 20s;  } }
+            @keyframes spin-earth{ 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); transition: transform 20s; } }
+            
+            @-moz-keyframes move-astronaut {
+                100% { -moz-transform: translate(-160px, -160px);}
+            }
+            @-webkit-keyframes move-astronaut {
+                100% { -webkit-transform: translate(-160px, -160px);}
+            }
+            @keyframes move-astronaut{
+                100% { -webkit-transform: translate(-160px, -160px); transform:translate(-160px, -160px); }
+            }
+            @-moz-keyframes rotate-astronaut {
+                100% { -moz-transform: rotate(-720deg);}
+            }
+            @-webkit-keyframes rotate-astronaut {
+                100% { -webkit-transform: rotate(-720deg);}
+            }
+            @keyframes rotate-astronaut{
+                100% { -webkit-transform: rotate(-720deg); transform:rotate(-720deg); }
+            }
+            
+            @-moz-keyframes glow-star {
+                40% { -moz-opacity: 0.3;}
+                90%,100% { -moz-opacity: 1; -moz-transform: scale(1.2);}
+            }
+            @-webkit-keyframes glow-star {
+                40% { -webkit-opacity: 0.3;}
+                90%,100% { -webkit-opacity: 1; -webkit-transform: scale(1.2);}
+            }
+            @keyframes glow-star{
+                40% { -webkit-opacity: 0.3; opacity: 0.3;  }
+                90%,100% { -webkit-opacity: 1; opacity: 1; -webkit-transform: scale(1.2); transform: scale(1.2); border-radius: 999999px;}
+            }
+            
+            
+            
+            html, body{
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                font-family: 'Dosis', sans-serif;
+                font-weight: 300;
+                -webkit-user-select: none; /* Safari 3.1+ */
+                -moz-user-select: none; /* Firefox 2+ */
+                -ms-user-select: none; /* IE 10+ */
+                user-select: none; /* Standard syntax */
+            }
+            
+            .bg-purple{
+                background-image: linear-gradient(to bottom right, #001B5B,#4F6FCE,#9BBE3D);
+                background-repeat: repeat-x;
+                background-size: cover;
+                background-position: left top;
+                height: 100%;
+                overflow: hidden;
+                
+            }
+            
+            .btn-go-home{
+                position: relative;
+                z-index: 200;
+                margin: 15px auto;
+                width: 100px;
+                padding: 6px 15px 10px 15px;
+                border: 2px solid #001B5B;
+                background-color: #9BBE3D;
+                border-radius: 100px;
+                font-weight: bold;
+                display: block;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                letter-spacing : 2px;
+                font-size: 16px;
+                
+                -webkit-transition: all 0.3s ease-in;
+                -moz-transition: all 0.3s ease-in;
+                -ms-transition: all 0.3s ease-in;
+                -o-transition: all 0.3s ease-in;
+                transition: all 0.3s ease-in;
+            }
+            
+            .btn-go-home:hover{
+                background-color: #001B5B;
+                border-color: #9BBE3D;
+                color: #9BBE3D;
+                transform: scale(1.05);
+                box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+            }
+            
+            .central-body{
+                padding: 17% 5% 10% 5%;
+                text-align: center;
+            }
+            
+            .objects img{
+                z-index: 90;
+                pointer-events: none;
+            }
+            
+            .object_rocket{
+                z-index: 95;
+                position: absolute;
+                transform: translateX(-50px);
+                top: 75%;
+                pointer-events: none;
+                animation: rocket-movement 200s linear infinite both running;
+            }
+            
+            .object_earth{
+                position: absolute;
+                top: 20%;
+                left: 15%;
+                z-index: 90;
+            }
+            
+            .object_moon{
+                position: absolute;
+                top: 12%;
+                left: 25%;
+            }
+            
+            
+            .object_astronaut{
+                animation: rotate-astronaut 200s infinite linear both alternate;
+            }
+            
+            .box_astronaut{
+                z-index: 110 !important;
+                position: absolute;
+                top: 60%;
+                right: 20%;
+                will-change: transform;
+                animation: move-astronaut 40s infinite linear both alternate;
+            }
+            
+            
+            .stars{
+                background: url(http://salehriaz.com/404Page/img/overlay_stars.svg);
+                background-repeat: repeat;
+                background-size: contain;
+                background-position: left top;
+            }
+            
+            
+            
+            @media only screen and (max-width: 600px){
+                .box_astronaut{
+                    top: 70%;
+                }
+                
+                .central-body{
+                    padding-top: 25%;
+                }
+                .central-body{
+                padding: 17% 5% 10% 5%;
+                text-align: center;
+            }
+            
+            }
+            
+            #PgNtFod h1{
+                font-size: 32px;
+            }
+            
+            #PgNtFod p{
+                font-weight: 500;
+                font-size: 20px;
+            
+            }
+            </style> 
+
+<!-- Canonique url -->
+<link rel="canonical" href="https://www.nettoyage-casablanca-maroc.com/page-non-trouvee.html">
+
+
+</head>
+<body class="wide">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P7X4W7B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+        <div class="stars">
+            <div class="central-body">
+                <div id="PgNtFod">
+                    <h1>Résultat non trouvé</h1>
+                    <p>Nous n'avons pas trouvé votre page</p>
+                    <p>Mais nous avons des services de nettoyage a vous</p>
+                    <p>proposer avec des prix abordables</p>
+                </div>
+                <a href="https://www.nettoyage-casablanca-maroc.com" class="btn-go-home">Accueil</a>
+            </div>
+            <div class="objects">
+                <img class="object_rocket" src="http://salehriaz.com/404Page/img/rocket.svg" width="40px">
+                <div class="earth-moon">
+                    <img class="object_earth" src="http://salehriaz.com/404Page/img/earth.svg" width="100px">
+                    <img class="object_moon" src="http://salehriaz.com/404Page/img/moon.svg" width="80px">
+                </div>
+                <div class="box_astronaut">
+                    <img class="object_astronaut" src="http://salehriaz.com/404Page/img/astronaut.svg" width="140px">
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+</body>
+</html>
